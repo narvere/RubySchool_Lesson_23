@@ -60,9 +60,10 @@ post('/visit') do
  @phone = params[:phone]
  @date = params[:date]
  @parik = params[:parik]
+ @color = params[:color]
 
  f = File.open './public/users.txt', 'a'
- f.write "User: #{@name} will call #{@phone} at #{@date} by #{@parik}.\n"
+ f.write "User: #{@name} will call #{@phone} at #{@date} by #{@parik} in #{@color}.\n"
  f.close
  erb :visit
 end
